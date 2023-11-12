@@ -16,8 +16,14 @@ class ProductListCreateApiView(StaffEditorPermissionMixin, generics.ListCreateAP
         description = serializer.validated_data.get("description") or None
         if description is None:
             description = title
-        serializer.save(description=description)
+        serializer.save(user=self.request.user, description=description)
         # Send a django signal here
+
+    def get_queryset(self):
+        qs = super(ProductListCreateApiView, self).get_queryset()
+        request = self.request
+        print(request.user)
+        return qs.filter(user=request.user)
 
 
 product_list_create_view = ProductListCreateApiView.as_view()
