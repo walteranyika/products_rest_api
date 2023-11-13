@@ -23,7 +23,8 @@ class ProductSerializer(serializers.ModelSerializer):
             "sale_price",
             "my_discount",
             "url",
-            "edit_url"
+            "edit_url",
+            'public',
         ]
 
     # def validate_title(self, value):

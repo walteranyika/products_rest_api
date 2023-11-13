@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
     'products.apps.ProductsConfig',
+    'search.apps.SearchConfig',
     'rest_framework',
     'rest_framework.authtoken',
 
