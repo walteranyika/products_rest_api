@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'search.apps.SearchConfig',
     'rest_framework',
     'rest_framework.authtoken',
+    'algoliasearch_django',
 
 ]
 
@@ -137,4 +138,10 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
     "PAGE_SIZE": 4
+}
+
+ALGOLIA = {
+    'APPLICATION_ID': 'ET6UUZ1JK2',
+    'API_KEY': '10c70f862856e9fa0c0e31827e1ff54d',
+    'INDEX_PREFIX': 'walt'
 }
