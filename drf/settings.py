@@ -132,6 +132,8 @@ REST_FRAMEWORK = {
         "main.authentication.TokenAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": [
-       "rest_framework.permissions.IsAuthenticatedOrReadOnly" # Allows Only GET for everyone
-    ]
+        "rest_framework.permissions.IsAuthenticatedOrReadOnly"  # Allows Only GET for everyone
+    ],
+    "DEFAULT_PAGINATION_CLASS": "rest_framework.pagination.LimitOffsetPagination",
+    "PAGE_SIZE": 4
 }
